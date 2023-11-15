@@ -1,0 +1,38 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3001; // Choose your desired port
+
+app.use(bodyParser.json());
+
+// Sample projects data
+const projects = [
+  { 
+    id: 1, 
+    name: 'Project A', 
+    timeline: { 
+      startDate: '2023-01-01', 
+      endDate: '2023-06-30' 
+    } 
+  },
+  { 
+    id: 2, 
+    name: 'Project B', 
+    timeline: { 
+      startDate: '2023-03-15', 
+      endDate: '2023-09-30' 
+    } 
+  },
+  // Add more projects as needed
+];
+
+// API endpoint to get all projects
+app.get('/api/projects', (req, res) => {
+  res.json(projects);
+});
+
+// Add more API endpoints for other functionalities (create, update, delete, etc.)
+
+app.listen(port, () => {
+  console.log(Server is running on port ${port});
+});
