@@ -7,18 +7,8 @@ app.use(bodyParser.json());
 
 // Sample projects data
 const projects = [
-  { 
-    id: 1, 
-    name: 'Project A', 
-    goals: ['Goal 1', 'Goal 2', 'Goal 3'],
-    objectives: ['Objective 1', 'Objective 2', 'Objective 3']
-  },
-  { 
-    id: 2, 
-    name: 'Project B', 
-    goals: ['Goal A', 'Goal B', 'Goal C'],
-    objectives: ['Objective X', 'Objective Y', 'Objective Z']
-  },
+  { id: 1, name: 'Project A', scope: 'Scope A', /* other fields */ },
+  { id: 2, name: 'Project B', scope: 'Scope B', /* other fields */ },
   // Add more projects as needed
 ];
 
